@@ -1,0 +1,287 @@
+@font-face {
+    font-family: 'Caveat';
+    src: url('fonts/Caveat-Regular.ttf') format('truetype');
+}
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Caveat', cursive, sans-serif;
+    /* Update font-family to reflect custom font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('background/startbackground.png') no-repeat center center/cover;
+    text-align: center;
+}
+
+button{
+    font-family: 'Caveat', cursive, sans-serif;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    /* Transparent White */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    font-family: 'Caveat', cursive;
+    font-size: 3em;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(255, 118, 141, 0.5);
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+}
+
+@font-face {
+    font-family: 'Caveat';
+    src: url('fonts/Caveat-Regular.ttf') format('truetype');
+}
+
+body {
+    background-color: #ffc3da;
+    font-family: 'Caveat', sans-serif;
+}
+
+.envelope-wrapper {
+    height: 380px;
+}
+
+#envelope {
+    position: relative;
+    height: 180px;
+    width: 280px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 50%;
+    background-color: #FF6863;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.front {
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: 3;
+}
+
+.flap {
+    border-top: 98px solid #FF6863;
+    border-left: 140px solid transparent;
+    border-right: 140px solid transparent;
+    border-bottom: 82px solid transparent;
+    transform-origin: top;
+}
+
+.pocket {
+    border-left: 140px solid #FF8BA0;
+    border-right: 140px solid #FF8BA0;
+    border-bottom: 90px solid #FFA8B5;
+    border-top: 90px solid transparent;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.letter {
+    position: relative;
+    background-color: white;
+    width: 90%;
+    height: 95%;
+    top: 0%;
+    border-radius: 10px;
+    box-shadow: 0 2px 26px rgba(0, 0, 0, .12);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.letter:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+
+.line1 {
+    top: 15%;
+}
+
+.line2 {
+    top: 25%;
+}
+
+.line3 {
+    top: 45%;
+    text-align: center;
+}
+
+.line4 {
+    top: 55%;
+    text-align: center;
+}
+
+.open .flap {
+    transform: rotatex(180deg);
+    transition: transform 0.4s ease, z-index 0.6s;
+    z-index: 1;
+}
+
+.close .flap {
+    transform: rotatex(0deg);
+    transition: transform 0.4s 0.6s ease, z-index 1s;
+    z-index: 5;
+}
+
+.open .letter {
+    transform: translatey(-100px);
+    transition: transform 0.4s 0.6s ease, z-index 0.6s;
+    z-index: 2;
+}
+
+.close .letter {
+    transform: translatey(0deg);
+    transition: transform 0.4s ease, z-index 1s;
+    z-index: 1;
+}
+
+.continue {
+    text-align: center;
+}
+
+.continue button {
+    font-weight: 800;
+    font-style: normal;
+    transition: all 0.1s linear;
+    background-color: transparent;
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 20px;
+    margin-top: 100px;
+    padding: 10px;
+    line-height: 2em;
+    text-decoration: none;
+    min-width: 150px;
+    outline: none;
+}
+
+.continue button:hover {
+    background-color: #FFFFFF;
+    cursor: pointer;
+    color: white;
+}
+
+.question {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.question p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FF6863;
+}
+
+.question button {
+    background-color: #FF6863;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.question button:hover {
+    background-color: #FF8BA0;
+}
+
+.surprise {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.itinerary-img {
+    width: 70%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+#downloadBtn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #FF6863;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#downloadBtn:hover {
+    background-color: #FF8BA0;
+    transform: scale(1.05);
+}
+
+.noBtn {
+    background-color: #999 !important; /* Greyed out */
+    color: #444 !important; /* Darker text */
+    cursor: not-allowed;
+    border: 2px dashed #666; /* Dashed border to indicate it's inactive */
+    text-decoration: line-through; /* Strikethrough effect */
+    font-style: italic;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0.7; /* Slight transparency */
+    transition: all 0.2s;
+}
+
+/* Shaking effect on tap */
+.noBtn.shake {
+    animation: shake-animation 0.3s ease-in-out;
+}
+
+@keyframes shake-animation {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
